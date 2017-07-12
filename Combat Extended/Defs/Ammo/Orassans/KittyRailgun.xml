@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoKittyRailgun</defName>
+      <label>Orassan DU-Slug</label>
+      <parent>AmmoHighCaliber</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberHighCaliber</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_KittyRailgun</defName>
+    <label>Orassan DU-Slug</label>
+    <ammoTypes>
+      <Ammo_KittyRailgun>Bullet_KittyRailgun</Ammo_KittyRailgun>
+      <Ammo_KittyRailgun_HE>Bullet_KittyRailgun_HE</Ammo_KittyRailgun_HE>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="KittyRailgunBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Massive, charged, depleted uranium slug for use in advanced Orassan sniper designs.</description>
+    <statBases>
+	  <Mass>0.12</Mass>
+	  <Bulk>0.15</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoKittyRailgun</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="KittyRailgunBase">
+    <defName>Ammo_KittyRailgun</defName>
+    <label>Depleted Uranium Slug</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.65</MarketValue>
+    </statBases>
+	<cookOffProjectile>Bullet_KittyRailgun</cookOffProjectile>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+
+  <ThingDef ParentName="KittyRailgunBase">
+    <defName>Ammo_KittyRailgun_HE</defName>
+    <label>Depleted Uranium Slug (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.70</MarketValue>
+    </statBases>
+    <ammoClass>ExplosiveAP</ammoClass>
+	<cookOffProjectile>Bullet_KittyRailgun_HE</cookOffProjectile>
+    <canBeSpawningInventory>false</canBeSpawningInventory>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseKittyRailgunBullet" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>350</speed>
+      <dropsCasings>false</dropsCasings>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseKittyRailgunBullet">
+    <defName>Bullet_KittyRailgun</defName>
+    <label>railgun slug</label>
+    <projectile>
+      <damageAmountBase>65</damageAmountBase>
+      <armorPenetration>1.180</armorPenetration>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseKittyRailgunBullet">
+    <defName>Bullet_KittyRailgun_HE</defName>
+    <label>railgun slug HE</label>
+    <projectile>
+      <damageAmountBase>30</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>40</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.660</armorPenetration>
+    </projectile>
+  </ThingDef>
+  
+	<!-- ==================== Recipes ========================== -->
+
+  <RecipeDef ParentName="ChargeAmmoRecipeBase">
+    <defName>MakeAmmo_KittyRailgun</defName>
+    <label>make Orassan Railgun Slugs x20</label>
+    <description>Craft 20 Orassan Railgun Slugs.</description>
+    <jobString>Making Orassan Railgun Slugs.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>Uranium</li>
+        <li>Component</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_KittyRailgun>20</Ammo_KittyRailgun>
+    </products>
+    <WorkAmount>4000</WorkAmount>
+  </RecipeDef>
+
+  <RecipeDef ParentName="ChargeAmmoRecipeBase">
+    <defName>MakeAmmo_KittyRailgun_HE</defName>
+    <label>make Orassan Railgun Slugs (HE) x200</label>
+    <description>Craft 200 Orassan Railgun Slugs (HE).</description>
+    <jobString>Making Orassan Railgun Slugs (HE).</jobString>
+     <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>Uranium</li>
+        <li>Component</li>
+		<li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_KittyRailgun_HE>20</Ammo_KittyRailgun_HE>
+    </products>
+    <WorkAmount>4000</WorkAmount>
+  </RecipeDef>
+	
+</Defs>

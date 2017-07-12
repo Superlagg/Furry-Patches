@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- ========== Make sure the mod is there first ========== -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	<!-- ========== Look for Fido ========== -->
+	<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Vulpine Race Pack A17</modName>
+	</li>
+	<!-- ========== Found Fido ========== -->
+	
+	<!-- ========== Turn our dog boys into dog *boys* ========== -->
+	<!-- ========== To be human is to be a tall brick ========== -->
+	<li Class="PatchOperationAddModExtension">
+	<!-- === Note to future furball compatibility nerds: 		=== -->
+	<!-- === Paste the defName of your horrible alien there   |	=== -->
+	<!-- === 												  V	=== -->
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Frijjid"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<!-- ========== Gives Gun Gizmos to Frijjid HUD thing ========== -->
+	<!-- ========== Also Makes Em Suppressable		   ========== -->
+	
+	<li Class="PatchOperationAdd">
+	<!-- === Shouldn't need to change this at all		  === -->
+	<!-- === Unless you changed the name of your BasePawn === -->
+	<!-- === In which case change "BasePawn" to that name === -->
+		<xpath>*/ThingDef[@Name="BasePawn"]/comps</xpath>
+		<value>
+			<li>
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</li>
+	
+	<!-- === Patch Frijjid default melee attacks === -->
+	<!-- === For the most part, it adds the CE melee handler thing 	=== -->
+	<!-- === And also defines armor penetration, which allows them	=== -->
+	<!-- === to actually do damage. Try attacking a raccoon with an === -->
+	<!-- === unpatched melee attack. I'll wait.						=== -->
+  <li Class="PatchOperationReplace">
+	<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Frijjid"]/verbs</xpath>
+    <value>
+		<verbs>
+        <li Class="CombatExtended.VerbPropertiesCE">
+			<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
+			<defaultCooldownTime>1.45</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<meleeArmorPenetration>0.08</meleeArmorPenetration>
+        </li>
+        <li Class="CombatExtended.VerbPropertiesCE">
+			<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
+			<defaultCooldownTime>1.45</defaultCooldownTime>
+			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+			<meleeDamageDef>Blunt</meleeDamageDef>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<meleeArmorPenetration>0.08</meleeArmorPenetration>
+        </li>
+		</verbs>
+	</value>
+	</li>
+	<!-- === No bite? No claws? How human! === -->
+	<!-- ===================================== -->
+	<!-- === BaseBodySize, ArmorRatings, MoveSpeed, and BaseHealth should already be set. I think. === -->
+	<!-- ===================================== -->
+	<!-- === Adds In Inspector Tabs 	   === -->
+	<!-- === Inventory and all that jazz   === -->
+	<!-- === Again, no need to change 'em  === -->
+	<!-- === Unless you changed it         === -->
+	<!-- === then change 'em			   === -->
+	
+	<li Class="PatchOperationReplace">
+		<xpath>*/ThingDef[@Name="BasePawn"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAdd">
+	
+		<xpath>*/ThingDef[@Name="BasePawn"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</li>
+		</operations>
+	</Operation>
+	
+	<!-- === Congratulations! Your alien is Combat Ready!	 === -->
+	<!-- === If your alien comes with extra guns and gear,	 === -->
+	<!-- === Congratulations! You're not even close to done! === -->
+</Patch>

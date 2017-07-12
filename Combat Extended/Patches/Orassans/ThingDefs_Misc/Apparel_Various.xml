@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Orassans</modName>
+			</li>
+			<!-- ========== Orassan Power Armor ========== -->
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName = "Apparel_KittyArmor"]/statBases</xpath>
+				<value>
+					<Bulk>90</Bulk>
+					<WornBulk>12</WornBulk>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Apparel_KittyArmor"]/equippedStatOffsets</xpath>
+				<value>
+					<CarryWeight>90</CarryWeight>
+					<CarryBulk>8</CarryBulk>
+					<ToxicSensitivity>-0.50</ToxicSensitivity>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Apparel_KittyArmor"]/statBases/Mass</xpath>
+				<value>
+					<Mass>45</Mass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Apparel_KittyArmor"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Apparel_KittyArmor"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			</value>
+		    </li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Apparel_KittyArmor"]/costList/Plasteel</xpath>
+				<value>
+				  <Plasteel>210</Plasteel>
+				  <DevilstrandCloth>50</DevilstrandCloth>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Apparel_KittyArmor"]/apparel/bodyPartGroups</xpath>
+				<value>
+					<li>Hands</li>
+					<li>Feet</li>
+			</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
+

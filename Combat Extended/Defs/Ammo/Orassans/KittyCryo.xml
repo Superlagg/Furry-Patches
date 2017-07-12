@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoKittyCryo</defName>
+      <label>Cryogenic Cell</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberFuelLarge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_KittyCryo</defName>
+    <label>Cryogenic Cell</label>
+    <ammoTypes>
+      <Ammo_KittyCryo>Bullet_KittyCryo</Ammo_KittyCryo>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="KittyCryoBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Cannister of compressed chemicals that react with organic materials to produce cryogenic effects, used by various cryolauncher designs. Also great for putting out a fire.</description>
+    <statBases>
+	  <Mass>0.3</Mass>
+	  <Bulk>0.4</Bulk>
+      <MarketValue>25</MarketValue>
+    </statBases>
+	<tradeTags>
+	  <li>CE_AutoEnableTrade</li>
+	  <li>CE_AutoEnableCrafting</li>
+	</tradeTags>
+    <thingCategories>
+      <li>Ammo30x64mmFuelCell</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+	<comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>20</explosionDamage>
+        <explosionDamageDef>Frostbite</explosionDamageDef>
+        <explosionRadius>5.6</explosionRadius>
+        <preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
+        <explosionSpawnChance>1</explosionSpawnChance>
+        <soundExplode>Explosion_Smoke</soundExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="KittyCryoBase">
+    <defName>Ammo_KittyCryo</defName>
+    <label>Cryogenic Cell</label>
+    <graphicData>
+      <texPath>Things/Ammo/FuelCell/Foam</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.61</MarketValue>
+    </statBases>
+    <ammoClass>FoamFuel</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>20</explosionDamage>
+        <explosionDamageDef>Frostbite</explosionDamageDef>
+        <explosionRadius>5.6</explosionRadius>
+        <preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
+        <explosionSpawnChance>1</explosionSpawnChance>
+        <soundExplode>Explosion_Smoke</soundExplode>
+      </li>
+    </comps>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+    <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_KittyCryo</defName>
+    <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <label>cryo cannon shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/InfernoCannonShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Frostbite</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>100</speed>
+      <flyOverhead>false</flyOverhead>
+      <explosionRadius>6</explosionRadius>
+      <preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
+      <explosionSpawnChance>1</explosionSpawnChance>
+      <soundExplode>Explosion_Smoke</soundExplode>
+    </projectile>
+  </ThingDef>
+  
+	<!-- ==================== Recipes ========================== -->
+
+  <RecipeDef ParentName="ChargeAmmoRecipeBase">
+    <defName>MakeAmmo_KittyCryo</defName>
+    <label>make Cryo Cells x50</label>
+    <description>Craft 50 Cryo Cells.</description>
+    <jobString>Making Cryo Cells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_KittyCryo>50</Ammo_KittyCryo>
+    </products>
+    <WorkAmount>1000</WorkAmount>
+  </RecipeDef>
+
+</Defs>

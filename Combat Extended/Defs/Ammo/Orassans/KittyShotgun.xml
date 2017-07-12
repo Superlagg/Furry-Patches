@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoKittyShotgun</defName>
+      <label>Orassan Shotgun Shell</label>
+      <parent>AmmoShotguns</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberShotgun</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_KittyShotgun</defName>
+    <label>Orassan Shotgun Shell</label>
+    <ammoTypes>
+      <Ammo_KittyShotgun>Bullet_KittyShotgun</Ammo_KittyShotgun>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="KittyShotgunBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Tightly bundled cluster of magnetized flechettes designed for use in advanced Orassan shotgun designs.</description>
+    <statBases>
+	  <Mass>0.06</Mass>
+	  <Bulk>0.08</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoKittyShotgun</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="KittyShotgunBase">
+    <defName>Ammo_KittyShotgun</defName>
+    <label>Orassan Shotgun Shell</label>
+    <graphicData>
+      <texPath>Things/Ammo/Shotgun/Shot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.20</MarketValue>
+    </statBases>
+    <ammoClass>BuckShot</ammoClass>
+	<cookOffProjectile>Bullet_KittyShotgun</cookOffProjectile>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseKittyShotgunBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>150</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseKittyShotgunBullet">
+    <defName>Bullet_KittyShotgun</defName>
+    <label>flechette</label>
+		<projectile>
+			<damageAmountBase>7</damageAmountBase>
+			<secondaryDamage>
+				<li>
+				  <def>Bomb_Secondary</def>
+				  <amount>2</amount>
+				</li>
+			</secondaryDamage>
+			<pelletCount>10</pelletCount>
+			<armorPenetration>0.210</armorPenetration>
+			<spreadMult>20</spreadMult>
+		</projectile>
+  </ThingDef>
+  
+	<!-- ==================== Recipes ========================== -->
+
+  <RecipeDef ParentName="ChargeAmmoRecipeBase">
+    <defName>MakeAmmo_KittyShotgun</defName>
+    <label>make Orassan Shotgun Shells x50</label>
+    <description>Craft 50 Orassan Shotgun Shells.</description>
+    <jobString>Making Orassan Shotgun Shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>Uranium</li>
+        <li>Component</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_KittyShotgun>50</Ammo_KittyShotgun>
+    </products>
+    <WorkAmount>4000</WorkAmount>
+  </RecipeDef>
+
+</Defs>

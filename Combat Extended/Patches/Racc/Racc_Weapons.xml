@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Racc Race A17</modName>
+      </li>
+	  
+      <!-- Walthracc PPK -->
+      <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>Racc_WPPK</defName>
+        <statBases>
+          <Mass>1</Mass>
+          <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+          <SightsEfficiency>1.10</SightsEfficiency>
+          <ShotSpread>0.14</ShotSpread>
+          <SwayFactor>1.01</SwayFactor>
+          <Bulk>1.5</Bulk>
+          <WorkToMake>25000</WorkToMake>
+        </statBases>
+        <costList>
+		  <Steel>60</Steel>
+		  <Component>3</Component>
+        </costList>
+        <Properties>
+          <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <projectileDef>Bullet_22LR_FMJ</projectileDef>
+          <warmupTime>0.1</warmupTime>
+          <range>22</range>
+          <soundCast>Xen_SD</soundCast>
+		  <muzzleFlashScale>1</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+          <magazineSize>9</magazineSize>
+          <reloadTime>2.75</reloadTime>
+          <ammoSet>AmmoSet_22LR</ammoSet>
+        </AmmoUser>
+		<FireModes>
+			<aiAimMode>Snapshot</aiAimMode>
+		</FireModes>
+        <weaponTags>
+		  <li>RPistol</li>
+		  <li>BallisticShield_ValidSidearm</li>
+		  <li>MedievalShields_ValidSidearm</li>
+		</weaponTags>
+        <researchPrerequisite>OChargedShot</researchPrerequisite>
+      </li>
+
+      <!-- etc.. -->
+    </operations>
+  </Operation>
+
+</Patch>

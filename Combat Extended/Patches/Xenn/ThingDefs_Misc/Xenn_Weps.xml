@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Xenn Race A17</modName>
+      </li>
+
+      <!-- Xenn Burn Cannon -->
+      <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>XennBurnCannon</defName>
+        <statBases>
+          <Mass>6.5</Mass>
+          <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+          <SightsEfficiency>1.10</SightsEfficiency>
+          <ShotSpread>0.14</ShotSpread>
+          <SwayFactor>1.01</SwayFactor>
+          <Bulk>2.5</Bulk>
+          <WorkToMake>25000</WorkToMake>
+        </statBases>
+        <costList>
+		  <Uranium>1</Uranium>
+		  <Steel>15</Steel>
+		  <Plasteel>15</Plasteel>
+		  <Component>5</Component>
+        </costList>
+        <Properties>
+          <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <projectileDef>Bullet_30x64mmFuel_Incendiary</projectileDef>
+          <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+          <burstShotCount>5</burstShotCount>
+          <warmupTime>0.2</warmupTime>
+          <range>40</range>
+          <soundCast>Xenngun</soundCast>
+		  <soundCastTail>GunTail_Heavy</soundCastTail>
+		  <muzzleFlashScale>12</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+          <magazineSize>20</magazineSize>
+          <reloadTime>3.75</reloadTime>
+          <ammoSet>AmmoSet_30x64mmFuel</ammoSet>
+        </AmmoUser>
+		<FireModes>
+			<aiAimMode>Snapshot</aiAimMode>
+		</FireModes>
+        <weaponTags>
+		   <li>MedievalShields_ValidSidearm</li>
+		   <li>XennRifle</li>
+        </weaponTags>
+      </li>
+	  
+	  <!-- Xenn Frost Cannon -->
+      <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>XennFrostCannon</defName>
+        <statBases>
+          <Mass>6.5</Mass>
+          <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+          <SightsEfficiency>1.10</SightsEfficiency>
+          <ShotSpread>0.14</ShotSpread>
+          <SwayFactor>1.01</SwayFactor>
+          <Bulk>2.5</Bulk>
+          <WorkToMake>25000</WorkToMake>
+        </statBases>
+        <costList>
+		  <Uranium>1</Uranium>
+		  <Steel>15</Steel>
+		  <Plasteel>15</Plasteel>
+		  <Component>5</Component>
+        </costList>
+        <Properties>
+          <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <projectileDef>Bullet_KittyCryo</projectileDef>
+          <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+          <burstShotCount>5</burstShotCount>
+          <warmupTime>0.2</warmupTime>
+          <range>40</range>
+          <soundCast>Xenngun</soundCast>
+		  <soundCastTail>GunTail_Heavy</soundCastTail>
+		  <muzzleFlashScale>12</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+          <magazineSize>20</magazineSize>
+          <reloadTime>3.75</reloadTime>
+          <ammoSet>AmmoSet_KittyCryo</ammoSet>
+        </AmmoUser>
+		<FireModes>
+			<aiAimMode>Snapshot</aiAimMode>
+		</FireModes>
+        <weaponTags>
+		   <li>MedievalShields_ValidSidearm</li>
+		   <li>XennRifle</li>
+        </weaponTags>
+      </li>
+      <!-- etc.. -->
+    </operations>
+  </Operation>
+
+</Patch>
