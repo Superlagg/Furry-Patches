@@ -31,8 +31,8 @@
           <hasStandardCommand>true</hasStandardCommand>
           <projectileDef>Bullet_30x64mmFuel_Incendiary</projectileDef>
           <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-          <burstShotCount>5</burstShotCount>
-          <warmupTime>0.2</warmupTime>
+          <burstShotCount>2</burstShotCount>
+          <warmupTime>1</warmupTime>
           <range>40</range>
           <soundCast>Xenngun</soundCast>
 		  <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -53,6 +53,7 @@
       </li>
 	  
 	  <!-- Xenn Frost Cannon -->
+	  <!-- Gonna just be the firegun for now cus ill need to make a good ammo 4 it lol heart -->
       <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
         <defName>XennFrostCannon</defName>
         <statBases>
@@ -73,10 +74,10 @@
         <Properties>
           <verbClass>CombatExtended.Verb_ShootCE</verbClass>
           <hasStandardCommand>true</hasStandardCommand>
-          <projectileDef>Bullet_KittyCryo</projectileDef>
+          <projectileDef>Bullet_30x64mmFuel_Incendiary</projectileDef>
           <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-          <burstShotCount>5</burstShotCount>
-          <warmupTime>0.2</warmupTime>
+          <burstShotCount>2</burstShotCount>
+          <warmupTime>1</warmupTime>
           <range>40</range>
           <soundCast>Xenngun</soundCast>
 		  <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -85,7 +86,7 @@
         <AmmoUser>
           <magazineSize>20</magazineSize>
           <reloadTime>3.75</reloadTime>
-          <ammoSet>AmmoSet_KittyCryo</ammoSet>
+          <ammoSet>AmmoSet_30x64mmFuel</ammoSet>
         </AmmoUser>
 		<FireModes>
 			<aiAimMode>Snapshot</aiAimMode>

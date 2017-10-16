@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Logann Race A17</modName>
+      </li>
+
+		<!-- Wolverine Supershotgun -->
+		<!-- Now I have no idea how to make a gun also be a knife -->
+		<!-- But I do know how to make it kinda deadly regardless -->
+		<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_WolvShotgun</defName>
+		<statBases>
+			<WorkToMake>30500</WorkToMake>
+			<SightsEfficiency>0.6</SightsEfficiency>
+			<ShotSpread>0.5</ShotSpread>
+			<SwayFactor>1.51</SwayFactor>
+			<Bulk>9.60</Bulk>
+			<Mass>5.45</Mass>
+			<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>55</Steel>
+			<Component>5</Component>
+			<Chemfuel>10</Chemfuel>
+		</costList>
+        <Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<recoilAmount>4.5</recoilAmount> <!-- get fucked lol -->
+			<hasStandardCommand>true</hasStandardCommand>
+			<projectileDef>Bullet_12Gauge_Buck</projectileDef>
+			<burstShotCount>15</burstShotCount>
+			<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+			<warmupTime>0.6</warmupTime>
+			<range>16</range>
+			<soundCast>ShotShotgun</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+			<magazineSize>15</magazineSize>
+			<reloadTime>6</reloadTime>
+			<ammoSet>AmmoSet_12Gauge</ammoSet>
+        </AmmoUser>
+		<FireModes>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>15</aimedBurstShotCount>
+		</FireModes>
+			<researchPrerequisite>CE_AdvancedFirearms</researchPrerequisite>
+		</li>
+		<!-- ...or absolutely useless. One of those. -->
+		<!-- ...or how to make it stop being a knife! Ack! Bug! -->
+		<!-- To be expected from a gun designed by wild animals -->
+	  
+		<!-- ========== Wolverine Katana ========== -->
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Katana"]/statBases</xpath>
+			<value>
+				<MeleeWeapon_Penetration>0.2</MeleeWeapon_Penetration>
+				<Bulk>6</Bulk>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Katana"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<MeleeCritChance>1</MeleeCritChance>
+					<MeleeParryChance>0.8</MeleeParryChance>
+				</equippedStatOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Katana"]/verbs</xpath>
+			<value>
+				<verbs>
+					<li>
+						<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<meleeDamageDef>Stab</meleeDamageDef>
+					</li>
+				</verbs>
+			</value>
+		</li>
+		
+	  
+		<!-- ========== Wolverine Axe ========== -->
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Axe"]/statBases</xpath>
+			<value>
+				<MeleeWeapon_Penetration>0.6</MeleeWeapon_Penetration>
+				<Bulk>6</Bulk>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Axe"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<MeleeCritChance>1.3</MeleeCritChance>
+					<MeleeParryChance>0.8</MeleeParryChance>
+				</equippedStatOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Axe"]/verbs</xpath>
+			<value>
+				<verbs>
+					<li>
+						<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<meleeDamageDef>Stab</meleeDamageDef>
+					</li>
+				</verbs>
+			</value>
+		</li>
+		
+		<!-- ========== Wolverine Mace ========== -->
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Mace"]/statBases</xpath>
+			<value>
+				<MeleeWeapon_Penetration>0.2</MeleeWeapon_Penetration>
+				<Bulk>6</Bulk>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Mace"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<MeleeCritChance>0.8</MeleeCritChance>
+					<MeleeParryChance>1.2</MeleeParryChance>
+				</equippedStatOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Mace"]/verbs</xpath>
+			<value>
+				<verbs>
+					<li>
+						<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<meleeDamageDef>Blunt</meleeDamageDef>
+					</li>
+				</verbs>
+			</value>
+		</li>
+		
+		<!-- ========== Wolverine Sword ========== -->
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Sword"]/statBases</xpath>
+			<value>
+				<MeleeWeapon_Penetration>0.2</MeleeWeapon_Penetration>
+				<Bulk>6</Bulk>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Sword"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<MeleeCritChance>1</MeleeCritChance>
+					<MeleeParryChance>0.8</MeleeParryChance>
+				</equippedStatOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>/ThingDefs/ThingDef[defName = "Wolv_Sword"]/verbs</xpath>
+			<value>
+				<verbs>
+					<li>
+						<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<meleeDamageDef>Stab</meleeDamageDef>
+					</li>
+				</verbs>
+			</value>
+		</li>
+		
+    </operations>
+  </Operation>
+
+</Patch>

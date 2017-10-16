@@ -46,9 +46,9 @@
 		  <li>BallisticShield_ValidSidearm</li>
 		  <li>MedievalShields_ValidSidearm</li>
 		</weaponTags>
-        <researchPrerequisite>OChargedShot</researchPrerequisite>
+        <researchPrerequisite>CE_AdvancedFirearms</researchPrerequisite>
       </li>
-
+	  
       <!-- etc.. -->
     </operations>
   </Operation>
