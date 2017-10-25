@@ -23,7 +23,8 @@ Notes of note:
 - The Logann's shotgun straight up doesn't work. It holds ammo and looks mean, but it can't be fired and the bayonette cuts like a butter knife.
 - The Xenn Frost Cannon sets things on fire.
 - The Ferret Guns are wholesale ripped off of the Rimfire CE patch.
-- Equium, Logann, and Orassan pawns don't carry any ammunition.
+- Equium and Logann pawns don't carry any ammunition.
+- Orassans might spawn with ammo. Might.
 - Some Leeani troops don't carry ammunition due to being small woodland creatures.
 
 Feedback is appreciated!
