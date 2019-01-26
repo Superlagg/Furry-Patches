@@ -5,45 +5,11 @@
 		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Vulpine Race Pack A17</modName>
+				<modName>Vulpine Race Pack</modName>
 			</li>
-			<!-- ========== Military! ========== -->
-			<!-- ========== Sec ========== -->
+			<!-- ========== Scoot ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidSecurityGuard"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>2</min>
-					  <max>5</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.2</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-						  <min>60</min>
-						  <max>150</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== Soldier ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidSoldier"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FrijjidColonist"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -73,146 +39,12 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== Stalker ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidStalker"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FrijjidKeeper"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>4</min>
-					  <max>6</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.9</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>100</min>
-						  <max>300</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-
-			<!-- ========== Agent ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidAgent"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>8</min>
-					  <max>11</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.3</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			<!-- ========== Assassin ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidAssassin"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>8</min>
-					  <max>11</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.3</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== Civvies! ========== -->
-			<!-- ========== FrijjidColonist ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidColonist"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>3</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.2</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-						  <min>60</min>
-						  <max>150</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== FrijjidKeeper ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidKeeper"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>2</min>
+					  <min>3</min>
 					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
@@ -238,15 +70,13 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== FrijjidTrader ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidTrader"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FrijjidTrader"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
 					  <min>3</min>
-					  <max>4</max>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -255,10 +85,10 @@
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.9</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
 						  <min>100</min>
 						  <max>300</max>
@@ -271,30 +101,28 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== FrijjidSlave ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidSlave"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FrijjidSlave"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>8</min>
-					  <max>11</max>
+					  <min>3</min>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
+					  <min>500</min>
+					  <max>1400</max>
 					</shieldMoney>
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.3</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
+						  <min>100</min>
+						  <max>300</max>
 						</sidearmMoney>
 						<weaponTags>
 						  <li>CE_Sidearm_Melee</li>
@@ -304,29 +132,214 @@
 				  </li>
 				</value>
 			</li>
-			<!-- ========== FrijjidRefugee ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FrijjidRefugee"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FrijjidRefugee"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>2</min>
+					  <min>3</min>
 					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
+					  <min>500</min>
+					  <max>1400</max>
 					</shieldMoney>
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.3</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="OrassanTrader"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FrijjidSecurityGuard"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FrijjidSoldier"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FrijjidStalker"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FrijjidAgent"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FrijjidAssassin"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
 						</sidearmMoney>
 						<weaponTags>
 						  <li>CE_Sidearm_Melee</li>

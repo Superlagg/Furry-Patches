@@ -5,45 +5,11 @@
 		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Vulpine Race Pack A17</modName>
+				<modName>Vulpine Race Pack</modName>
 			</li>
-			<!-- ========== Military! ========== -->
-			<!-- ========== Sec ========== -->
+			<!-- ========== Scoot ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexSecurityGuard"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>2</min>
-					  <max>5</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.2</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-						  <min>60</min>
-						  <max>150</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== Soldier ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexSoldier"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FennexColonist"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -73,146 +39,12 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== Stalker ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexStalker"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FennexKeeper"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>4</min>
-					  <max>6</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.9</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>100</min>
-						  <max>300</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-
-			<!-- ========== Agent ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexAgent"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>8</min>
-					  <max>11</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.3</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			<!-- ========== Assassin ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexAssassin"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>8</min>
-					  <max>11</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.3</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== Civvies! ========== -->
-			<!-- ========== FennexColonist ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexColonist"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>3</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.2</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-						  <min>60</min>
-						  <max>150</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== FennexKeeper ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexKeeper"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>2</min>
+					  <min>3</min>
 					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
@@ -238,15 +70,13 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== FennexTrader ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexTrader"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FennexTrader"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
 					  <min>3</min>
-					  <max>4</max>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -255,10 +85,10 @@
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.9</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
 						  <min>100</min>
 						  <max>300</max>
@@ -271,30 +101,28 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== FennexSlave ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexSlave"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FennexSlave"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>8</min>
-					  <max>11</max>
+					  <min>3</min>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
+					  <min>500</min>
+					  <max>1400</max>
 					</shieldMoney>
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.3</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
+						  <min>100</min>
+						  <max>300</max>
 						</sidearmMoney>
 						<weaponTags>
 						  <li>CE_Sidearm_Melee</li>
@@ -304,29 +132,214 @@
 				  </li>
 				</value>
 			</li>
-			<!-- ========== FennexRefugee ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "FennexRefugee"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="FennexRefugee"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>2</min>
+					  <min>3</min>
 					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
+					  <min>500</min>
+					  <max>1400</max>
 					</shieldMoney>
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.3</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="OrassanTrader"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FennexSecurityGuard"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FennexSoldier"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FennexStalker"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FennexAgent"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="FennexAssassin"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
 						</sidearmMoney>
 						<weaponTags>
 						  <li>CE_Sidearm_Melee</li>

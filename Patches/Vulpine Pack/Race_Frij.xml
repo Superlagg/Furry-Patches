@@ -4,11 +4,11 @@
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
-	<!-- ========== Look for Fido ========== -->
+	<!-- ========== Look for Fenni ========== -->
 	<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Vulpine Race Pack A17</modName>
+				<modName>Vulpine Race Pack</modName>
 	</li>
-	<!-- ========== Found Fido ========== -->
+	<!-- ========== Found Fenni ========== -->
 	
 	<!-- ========== Turn our dog boys into dog *boys* ========== -->
 	<!-- ========== To be human is to be a tall brick ========== -->
@@ -24,7 +24,7 @@
 		</value>
 	</li>
 
-	<!-- ========== Gives Gun Gizmos to Frijjid HUD thing ========== -->
+	<!-- ========== Gives Gun Gizmos to Fennex HUD thing ========== -->
 	<!-- ========== Also Makes Em Suppressable		   ========== -->
 	
 	<li Class="PatchOperationAdd">
@@ -40,36 +40,60 @@
 		</value>
 	</li>
 	
-	<!-- === Patch Frijjid default melee attacks === -->
+	<!-- === Patch Fennex default melee attacks === -->
 	<!-- === For the most part, it adds the CE melee handler thing 	=== -->
 	<!-- === And also defines armor penetration, which allows them	=== -->
 	<!-- === to actually do damage. Try attacking a raccoon with an === -->
 	<!-- === unpatched melee attack. I'll wait.						=== -->
-  <li Class="PatchOperationReplace">
-	<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Frijjid"]/verbs</xpath>
-    <value>
-		<verbs>
-        <li Class="CombatExtended.VerbPropertiesCE">
-			<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-			<defaultCooldownTime>1.45</defaultCooldownTime>
-			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
-			<meleeDamageDef>Blunt</meleeDamageDef>
-			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-			<meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-        <li Class="CombatExtended.VerbPropertiesCE">
-			<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-			<defaultCooldownTime>1.45</defaultCooldownTime>
-			<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
-			<meleeDamageDef>Blunt</meleeDamageDef>
-			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-			<meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-		</verbs>
-	</value>
-	</li>
-	<!-- === No bite? No claws? How human! === -->
-	<!-- ===================================== -->
+			<li Class="PatchOperationAdd">
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_Frijjid"]/statBases</xpath>
+			<value>
+			<AimingAccuracy>1</AimingAccuracy>
+			<MeleeDodgeChance>1.6</MeleeDodgeChance>
+			<MeleeCritChance>1</MeleeCritChance>
+			<MeleeParryChance>0.75</MeleeParryChance>
+			<ReloadSpeed>1</ReloadSpeed>
+			<Suppressability>1</Suppressability>
+			</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Frijjid"]/tools</xpath>
+			<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+				<label>left claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>0.8</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<armorPenetration>0.10</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>right claws</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>0.8</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<armorPenetration>0.10</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<armorPenetration>0.16</armorPenetration>
+				</li>
+			</tools>
+			</value>
+			</li>
 	<!-- === BaseBodySize, ArmorRatings, MoveSpeed, and BaseHealth should already be set. I think. === -->
 	<!-- ===================================== -->
 	<!-- === Adds In Inspector Tabs 	   === -->

@@ -19,46 +19,55 @@
 	</li>
 	
 	<!-- ========== Patch Ori Melee Attacks ========== -->
+	<!-- ========== yeah its just monkey stats ========== -->
 	
-  <li Class="PatchOperationReplace">
-    <xpath>*/ThingDef[defName="Ori"]/verbs</xpath>
-    <value>
-      <verbs>
-        <li Class="CombatExtended.VerbPropertiesCE">
-          <verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-        <defaultCooldownTime>1.3</defaultCooldownTime>
-        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-          <meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-		<li Class="CombatExtended.VerbPropertiesCE">
-          <verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-        <defaultCooldownTime>1.3</defaultCooldownTime>
-        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
-        <meleeDamageDef>Scratch</meleeDamageDef>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-          <meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-		<li Class="CombatExtended.VerbPropertiesCE">
-          <verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-          <defaultCooldownTime>1.6</defaultCooldownTime>
-          <meleeDamageBaseAmount>14</meleeDamageBaseAmount>
-          <meleeDamageDef>Bite</meleeDamageDef>
-          <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-      	  <surpriseAttack>
-				<extraMeleeDamages>
-				<li>
-				<def>Stun</def>
-				<amount>20</amount>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Ori"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left hand</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.071</armorPenetration>
 				</li>
-				</extraMeleeDamages>
-		  </surpriseAttack>
-          <meleeArmorPenetration>0.13</meleeArmorPenetration>
-		  </li>
-      </verbs>
-    </value>
-  </li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right hand</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.071</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>3</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.048</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
 	</operations>
 	</Operation>
 </Patch>

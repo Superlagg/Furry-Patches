@@ -19,9 +19,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>*/ThingDef[defName="Apparel_OrassanPowerArmorHelmet"]/equippedStatOffsets</xpath>
 				<value>
-					<PsychicSensitivity>-0.2</PsychicSensitivity>
 					<AimingAccuracy>0.15</AimingAccuracy>
-					<ToxicSensitivity>-0.50</ToxicSensitivity>
 			</value>
 			</li>
 			<li Class="PatchOperationReplace">
@@ -43,6 +41,33 @@
 				  <DevilstrandCloth>20</DevilstrandCloth>
 				</value>
 			</li>
+			<!-- ========== Orassan Sack Helmet ========== -->
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName = "Apparel_OrassanSacriArmorHelmet"]/statBases</xpath>
+				<value>
+					<Bulk>5</Bulk>
+					<WornBulk>1</WornBulk>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Apparel_OrassanSacriArmorHelmet"]/equippedStatOffsets</xpath>
+				<value>
+					<AimingAccuracy>0.15</AimingAccuracy>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Apparel_OrassanSacriArmorHelmet"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Apparel_OrassanSacriArmorHelmet"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			</value>
+		    </li>
 		</operations>
 	</Operation>
 

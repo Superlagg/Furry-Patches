@@ -5,7 +5,7 @@
 		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>[A17] Leeani Playable Race</modName>
+				<modName>Leeani Playable Race</modName>
 			</li>
 			<!-- ========== Quarterstaff ========== -->
 			<!-- ========== Lifted wholesale from VFWE_MELEE ========== -->

@@ -4,19 +4,19 @@
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
-	<!-- ========== Look for Kitty ========== -->
+	<!-- ========== Look for Fishie ========== -->
 	<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Orassans</modName>
+				<modName>Ni'Hal 1.0</modName>
 	</li>
-	<!-- ========== Found Kitty ========== -->
+	<!-- ========== Got one ========== -->
 	
-	<!-- ========== Turn our cat boys into cat *boys* ========== -->
+	<!-- ========== Turn our Fish boys into Fish *boys* ========== -->
 	<!-- ========== To be human is to be a tall brick ========== -->
 	<li Class="PatchOperationAddModExtension">
 	<!-- === Note to future furball compatibility nerds: 		=== -->
 	<!-- === Paste the defName of your horrible alien there   |	=== -->
 	<!-- === 												  V	=== -->
-		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Orassan"]</xpath>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_NiHal"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
 				<bodyShape>Humanoid</bodyShape>
@@ -24,14 +24,14 @@
 		</value>
 	</li>
 
-	<!-- ========== Gives Gun Gizmos to Orassan HUD thing ========== -->
+	<!-- ========== Gives Gun Gizmos to Nihal HUD thing ========== -->
 	<!-- ========== Also Makes Em Suppressable		   ========== -->
 	
 	<li Class="PatchOperationAdd">
 	<!-- === Shouldn't need to change this at all		  === -->
 	<!-- === Unless you changed the name of your BasePawn === -->
 	<!-- === In which case change "BasePawn" to that name === -->
-		<xpath>*/ThingDef[@Name="BaseOrassan"]/comps</xpath>
+		<xpath>*/ThingDef[@Name="BaseNiHal"]/comps</xpath>
 		<value>
 			<li>
 				<compClass>CombatExtended.CompPawnGizmo</compClass>
@@ -40,14 +40,15 @@
 		</value>
 	</li>
 	
-	<!-- === Patch Orassan default melee attacks === -->
+	<!-- === Patch Nihal default melee attacks === -->
 	<!-- === For the most part, it adds the CE melee handler thing 	=== -->
 	<!-- === And also defines armor penetration, which allows them	=== -->
 	<!-- === to actually do damage. 								=== -->
 			<li Class="PatchOperationAdd">
-			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_Orassan"]/statBases</xpath>
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_NiHal"]/statBases</xpath>
 			<value>
 			<AimingAccuracy>1</AimingAccuracy>
+			<MeleeDodgeChance>1.5</MeleeDodgeChance>
 			<MeleeCritChance>1</MeleeCritChance>
 			<MeleeParryChance>1</MeleeParryChance>
 			<ReloadSpeed>1</ReloadSpeed>
@@ -56,7 +57,7 @@
 			</li>
 
 			<li Class="PatchOperationReplace">
-			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Orassan"]/tools</xpath>
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_NiHal"]/tools</xpath>
 			<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -64,7 +65,7 @@
 				<capacities>
 					<li>Slash</li>
 				</capacities>
-				<power>10</power>
+				<power>6</power>
 				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<armorPenetration>0.15</armorPenetration>
@@ -74,7 +75,7 @@
 				<capacities>
 					<li>Slash</li>
 				</capacities>
-				<power>10</power>
+				<power>6</power>
 				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<armorPenetration>0.15</armorPenetration>
@@ -104,7 +105,7 @@
 				<capacities>
 					<li>Bite</li>
 				</capacities>
-				<power>10</power>
+				<power>7</power>
 				<cooldownTime>1.7</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 				<armorPenetration>0.16</armorPenetration>
@@ -112,7 +113,7 @@
 			</tools>
 			</value>
 			</li>
-	<!-- === Claws! Teeth! Me-yow!		   === -->
+	<!-- === Claws! Teeth! Blub!		   === -->
 	<!-- ===================================== -->
 	<!-- === BaseBodySize, ArmorRatings, MoveSpeed, and BaseHealth should already be set. I think. === -->
 	<!-- ===================================== -->
@@ -123,7 +124,7 @@
 	<!-- === then change 'em			   === -->
 	
 	<li Class="PatchOperationReplace">
-		<xpath>*/ThingDef[@Name="BaseOrassan"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<xpath>*/ThingDef[@Name="BaseNiHal"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
 		<value>
 			<li>CombatExtended.ITab_Inventory</li>
 		</value>
@@ -131,7 +132,7 @@
 
 	<li Class="PatchOperationAdd">
 	
-		<xpath>*/ThingDef[@Name="BaseOrassan"]/comps</xpath>
+		<xpath>*/ThingDef[@Name="BaseNiHal"]/comps</xpath>
 		<value>
 			<li Class="CombatExtended.CompProperties_Inventory" />
 		</value>

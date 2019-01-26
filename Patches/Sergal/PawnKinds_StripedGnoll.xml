@@ -5,11 +5,11 @@
 		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Logann Race</modName>
+				<modName>Sergals and Gnolls</modName>
 			</li>
 			<!-- ========== Scoot ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxColonist"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollScavenger"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -40,7 +40,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="FerrexExecutive"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollTrader"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -71,7 +71,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxTrader"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollPackLeader"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -102,7 +102,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxSlave"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollSlave"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -133,7 +133,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxRefugee"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollRefugee"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -164,12 +164,12 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxSecurityGuard"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollSentinel"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>3</min>
-					  <max>5</max>
+					  <min>30</min>
+					  <max>50</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -195,12 +195,12 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxMerc"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollRecruit"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>3</min>
-					  <max>5</max>
+					  <min>30</min>
+					  <max>50</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -226,12 +226,12 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxBrawler"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollHunter"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>3</min>
-					  <max>5</max>
+					  <min>30</min>
+					  <max>50</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -257,12 +257,12 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxProfessional"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollTracker"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>3</min>
-					  <max>5</max>
+					  <min>30</min>
+					  <max>50</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -288,12 +288,12 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxNinja"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="StripedGnollRanger"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>3</min>
-					  <max>5</max>
+					  <min>30</min>
+					  <max>50</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>

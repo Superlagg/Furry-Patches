@@ -4,7 +4,7 @@
 		<success>Always</success>
 		<operations>
 	<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Logann Race A17</modName>
+				<modName>Logann Race</modName>
 	</li>
 	<li Class="PatchOperationAddModExtension">
 		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Wolvx"]</xpath>
@@ -32,31 +32,58 @@
 		</value>
 	</li>
 	<!-- ========== Patch Wolvx Melee Attacks ========== -->
-	<!-- ========== Kinda tame for a wild animal ========== -->
+	<!-- ========== Big fuckin large boys (and girls) ========== -->
+	<!-- ========== Hit hard, and prefer to hit hard ========== -->
 	
-  <li Class="PatchOperationReplace">
-    <xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Wolvx"]/verbs</xpath>
-    <value>
-      <verbs>
-        <li Class="CombatExtended.VerbPropertiesCE">
-          <verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-          <defaultCooldownTime>1.45</defaultCooldownTime>
-          <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
-          <meleeDamageDef>Blunt</meleeDamageDef>
-          <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-          <meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-		<li Class="CombatExtended.VerbPropertiesCE">
-          <verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-          <defaultCooldownTime>1.45</defaultCooldownTime>
-          <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-          <meleeDamageDef>Blunt</meleeDamageDef>
-          <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-          <meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-      </verbs>
-    </value>
-  </li>
+			<li Class="PatchOperationAdd">
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_Wolvx"]/statBases</xpath>
+			<value>
+			<AimingAccuracy>0.8</AimingAccuracy>
+			<MeleeDodgeChance>0.8</MeleeDodgeChance>
+			<MeleeCritChance>1.75</MeleeCritChance>
+			<MeleeParryChance>1.75</MeleeParryChance>
+			<ReloadSpeed>0.8</ReloadSpeed>
+			<Suppressability>0.15</Suppressability>
+			</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Wolvx"]/tools</xpath>
+			<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<armorPenetration>0.12</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>right fist</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<armorPenetration>0.12</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<armorPenetration>0.40</armorPenetration>
+				</li>
+			</tools>
+			</value>
+			</li>
 
 
 	<!-- ========== BaseBodySize, ArmorRatings, MoveSpeed, and BaseHealth are already set. I think. ========== -->

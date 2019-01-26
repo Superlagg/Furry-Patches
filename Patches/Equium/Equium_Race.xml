@@ -4,19 +4,19 @@
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
-	<!-- ========== Look for Kitty ========== -->
+	<!-- ========== Look for Horse ========== -->
 	<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Orassans</modName>
+				<modName>Equiums</modName>
 	</li>
-	<!-- ========== Found Kitty ========== -->
+	<!-- ========== Found Horse. Neigh. ========== -->
 	
-	<!-- ========== Turn our cat boys into cat *boys* ========== -->
-	<!-- ========== To be human is to be a tall brick ========== -->
+	<!-- ========== Turn our horse boys into horse *boys* ========== -->
+	<!-- ========== To be human is to be a tall brick 	  ========== -->
 	<li Class="PatchOperationAddModExtension">
 	<!-- === Note to future furball compatibility nerds: 		=== -->
 	<!-- === Paste the defName of your horrible alien there   |	=== -->
 	<!-- === 												  V	=== -->
-		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Orassan"]</xpath>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
 				<bodyShape>Humanoid</bodyShape>
@@ -24,14 +24,14 @@
 		</value>
 	</li>
 
-	<!-- ========== Gives Gun Gizmos to Orassan HUD thing ========== -->
+	<!-- ========== Gives Gun Gizmos to Equium HUD thing ========== -->
 	<!-- ========== Also Makes Em Suppressable		   ========== -->
 	
 	<li Class="PatchOperationAdd">
 	<!-- === Shouldn't need to change this at all		  === -->
 	<!-- === Unless you changed the name of your BasePawn === -->
 	<!-- === In which case change "BasePawn" to that name === -->
-		<xpath>*/ThingDef[@Name="BaseOrassan"]/comps</xpath>
+		<xpath>*/ThingDef[@Name="BaseEquium"]/comps</xpath>
 		<value>
 			<li>
 				<compClass>CombatExtended.CompPawnGizmo</compClass>
@@ -40,79 +40,59 @@
 		</value>
 	</li>
 	
-	<!-- === Patch Orassan default melee attacks === -->
+	<!-- === Patch Equium default melee attacks === -->
 	<!-- === For the most part, it adds the CE melee handler thing 	=== -->
 	<!-- === And also defines armor penetration, which allows them	=== -->
-	<!-- === to actually do damage. 								=== -->
+	<!-- === to actually do damage. Try attacking a raccoon with an === -->
+	<!-- === unpatched melee attack. I'll wait.						=== -->
 			<li Class="PatchOperationAdd">
-			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_Orassan"]/statBases</xpath>
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_Equium"]/statBases</xpath>
 			<value>
-			<AimingAccuracy>1</AimingAccuracy>
-			<MeleeCritChance>1</MeleeCritChance>
-			<MeleeParryChance>1</MeleeParryChance>
-			<ReloadSpeed>1</ReloadSpeed>
-			<Suppressability>1</Suppressability>
+			<AimingAccuracy>0.9</AimingAccuracy>
+			<MeleeCritChance>1.5</MeleeCritChance>
+			<MeleeParryChance>01.1</MeleeParryChance>
+			<ReloadSpeed>0.9</ReloadSpeed>
+			<Suppressability>0.85</Suppressability>
 			</value>
 			</li>
 
 			<li Class="PatchOperationReplace">
-			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Orassan"]/tools</xpath>
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/tools</xpath>
 			<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
-				<label>left claws</label>
-				<capacities>
-					<li>Slash</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>1.5</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<armorPenetration>0.15</armorPenetration>
-				</li>
-				<li Class="CombatExtended.ToolCE">
-				<label>right claws</label>
-				<capacities>
-					<li>Slash</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>1.5</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<armorPenetration>0.15</armorPenetration>
-				</li>
-				<li Class="CombatExtended.ToolCE">
-				<label>left fist</label>
+				<label>left handnhoof</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>6</power>
-				<cooldownTime>1</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<armorPenetration>0.10</armorPenetration>
+				<power>9</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHandnHoof</linkedBodyPartsGroup>
+				<armorPenetration>0.12</armorPenetration>
 				</li>
 				<li Class="CombatExtended.ToolCE">
-				<label>right fist</label>
+				<label>right handnhoof</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>6</power>
-				<cooldownTime>1</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<armorPenetration>0.10</armorPenetration>
+				<power>9</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHandnHoof</linkedBodyPartsGroup>
+				<armorPenetration>0.12</armorPenetration>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 				<label>teeth</label>
 				<capacities>
 					<li>Bite</li>
 				</capacities>
-				<power>10</power>
-				<cooldownTime>1.7</cooldownTime>
+				<power>13</power>
+				<cooldownTime>1.9</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-				<armorPenetration>0.16</armorPenetration>
+				<armorPenetration>0.20</armorPenetration>
 				</li>
 			</tools>
 			</value>
 			</li>
-	<!-- === Claws! Teeth! Me-yow!		   === -->
 	<!-- ===================================== -->
 	<!-- === BaseBodySize, ArmorRatings, MoveSpeed, and BaseHealth should already be set. I think. === -->
 	<!-- ===================================== -->
@@ -123,7 +103,7 @@
 	<!-- === then change 'em			   === -->
 	
 	<li Class="PatchOperationReplace">
-		<xpath>*/ThingDef[@Name="BaseOrassan"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<xpath>*/ThingDef[@Name="BaseEquium"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
 		<value>
 			<li>CombatExtended.ITab_Inventory</li>
 		</value>
@@ -131,7 +111,7 @@
 
 	<li Class="PatchOperationAdd">
 	
-		<xpath>*/ThingDef[@Name="BaseOrassan"]/comps</xpath>
+		<xpath>*/ThingDef[@Name="BaseEquium"]/comps</xpath>
 		<value>
 			<li Class="CombatExtended.CompProperties_Inventory" />
 		</value>

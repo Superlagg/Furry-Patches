@@ -5,49 +5,15 @@
 		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>[A17] Leeani Playable Race</modName>
+				<modName>Ni'Hal 1.0</modName>
 			</li>
-			<!-- ========== Military! ========== -->
-			<!-- ========== OrassanSniper ========== -->
+			<!-- ========== Scoot ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanSniper"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="NihalPeasant"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>4</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.2</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-						  <min>60</min>
-						  <max>150</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== OrassanSlasher ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanSlasher"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
+					  <min>3</min>
 					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
@@ -73,147 +39,12 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== Soldier ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "LeeaniSoldier"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="NihalSlave"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>6</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.8</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>100</min>
-						  <max>300</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-
-			<!-- ========== OrassanGunner ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanGunner"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>6</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.9</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>1</generateChance>
-						<sidearmMoney>
-						  <min>1000</min>
-						  <max>3000</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-
-			<!-- ========== OrassanGrenadier ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanGrenadier"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>6</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.3</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.3</generateChance>
-						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-
-			<!-- ========== Civvies! ========== -->
-			<!-- ========== OrassanVillager ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanVillager"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>4</max>
-					</primaryMagazineCount>
-					<shieldMoney>
-					  <min>500</min>
-					  <max>1400</max>
-					</shieldMoney>
-					<shieldTags>
-					  <li>OutlanderShield</li>
-					</shieldTags>
-					<shieldChance>0.2</shieldChance>
-					<sidearms>
-					  <li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-						  <min>60</min>
-						  <max>150</max>
-						</sidearmMoney>
-						<weaponTags>
-						  <li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					  </li>
-					</sidearms>
-				  </li>
-				</value>
-			</li>
-			
-			<!-- ========== OrassanSlave ========== -->
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanSlave"]</xpath>
-				<value>
-				  <li Class="CombatExtended.LoadoutPropertiesExtension">
-					<primaryMagazineCount>
-					  <min>1</min>
+					  <min>3</min>
 					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
@@ -239,15 +70,13 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== OrassanRefugee ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanRefugee"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="NihalRefugee"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>6</max>
+					  <min>3</min>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
 					  <min>500</min>
@@ -256,10 +85,10 @@
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.8</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
 						  <min>100</min>
 						  <max>300</max>
@@ -272,30 +101,28 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== OrassanTownCouncilman? ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanTownCouncilman"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="NihalTownCouncilman"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>6</max>
+					  <min>3</min>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
+					  <min>500</min>
+					  <max>1400</max>
 					</shieldMoney>
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.9</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>1</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
-						  <min>1000</min>
-						  <max>3000</max>
+						  <min>100</min>
+						  <max>300</max>
 						</sidearmMoney>
 						<weaponTags>
 						  <li>CE_Sidearm_Melee</li>
@@ -305,30 +132,28 @@
 				  </li>
 				</value>
 			</li>
-
-			<!-- ========== OrassanTrader ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/PawnKindDefs/PawnKindDef[defName = "OrassanTrader"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="NihalSniper"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
-					  <min>1</min>
-					  <max>6</max>
+					  <min>3</min>
+					  <max>5</max>
 					</primaryMagazineCount>
 					<shieldMoney>
-					  <min>600</min>
-					  <max>2000</max>
+					  <min>500</min>
+					  <max>1400</max>
 					</shieldMoney>
 					<shieldTags>
 					  <li>OutlanderShield</li>
 					</shieldTags>
-					<shieldChance>0.3</shieldChance>
+					<shieldChance>0.5</shieldChance>
 					<sidearms>
 					  <li>
-						<generateChance>0.3</generateChance>
+						<generateChance>0.5</generateChance>
 						<sidearmMoney>
-						  <min>200</min>
-						  <max>400</max>
+						  <min>100</min>
+						  <max>300</max>
 						</sidearmMoney>
 						<weaponTags>
 						  <li>CE_Sidearm_Melee</li>
@@ -338,7 +163,161 @@
 				  </li>
 				</value>
 			</li>
-
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="NihalSoldier"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="NihalSlasher"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="NihalGunner"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="NihalGrenadier"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PawnKindDef[defName="NiHalBoss"]</xpath>
+				<value>
+				  <li Class="CombatExtended.LoadoutPropertiesExtension">
+					<primaryMagazineCount>
+					  <min>3</min>
+					  <max>5</max>
+					</primaryMagazineCount>
+					<shieldMoney>
+					  <min>500</min>
+					  <max>1400</max>
+					</shieldMoney>
+					<shieldTags>
+					  <li>OutlanderShield</li>
+					</shieldTags>
+					<shieldChance>0.5</shieldChance>
+					<sidearms>
+					  <li>
+						<generateChance>0.5</generateChance>
+						<sidearmMoney>
+						  <min>100</min>
+						  <max>300</max>
+						</sidearmMoney>
+						<weaponTags>
+						  <li>CE_Sidearm_Melee</li>
+						</weaponTags>
+					  </li>
+					</sidearms>
+				  </li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

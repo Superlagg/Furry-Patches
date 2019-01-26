@@ -4,19 +4,19 @@
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
-	<!-- ========== Look for Horse ========== -->
+	<!-- ========== Look for Sil... uh ========== -->
 	<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Equium Race</modName>
+				<modName>Sergals and Gnolls</modName>
 	</li>
-	<!-- ========== Found Horse. Neigh. ========== -->
+	<!-- ========== Whats an NME? ========== -->
 	
-	<!-- ========== Turn our horse boys into horse *boys* ========== -->
+	<!-- ========== Turn our NME boys into NME *boys*? ========== -->
 	<!-- ========== To be human is to be a tall brick 	  ========== -->
 	<li Class="PatchOperationAddModExtension">
 	<!-- === Note to future furball compatibility nerds: 		=== -->
 	<!-- === Paste the defName of your horrible alien there   |	=== -->
 	<!-- === 												  V	=== -->
-		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]</xpath>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_SergalNME"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
 				<bodyShape>Humanoid</bodyShape>
@@ -24,7 +24,7 @@
 		</value>
 	</li>
 
-	<!-- ========== Gives Gun Gizmos to Equium HUD thing ========== -->
+	<!-- ========== Gives Gun Gizmos to Serg HUD thing ========== -->
 	<!-- ========== Also Makes Em Suppressable		   ========== -->
 	
 	<li Class="PatchOperationAdd">
@@ -40,36 +40,61 @@
 		</value>
 	</li>
 	
-	<!-- === Patch Equium default melee attacks === -->
-	<!-- === For the most part, it adds the CE melee handler thing 	=== -->
-	<!-- === And also defines armor penetration, which allows them	=== -->
-	<!-- === to actually do damage. Try attacking a raccoon with an === -->
-	<!-- === unpatched melee attack. I'll wait.						=== -->
-  <li Class="PatchOperationReplace">
-	<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Equium"]/verbs</xpath>
-    <value>
-		<verbs>
-        <li Class="CombatExtended.VerbPropertiesCE">
-			<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-			<defaultCooldownTime>1.45</defaultCooldownTime>
-			<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
-			<meleeDamageDef>Blunt</meleeDamageDef>
-			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-			<meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-        <li Class="CombatExtended.VerbPropertiesCE">
-			<verbClass>CombatExtended.Verb_MeleeAttackCE</verbClass>
-			<defaultCooldownTime>1.45</defaultCooldownTime>
-			<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
-			<meleeDamageDef>Blunt</meleeDamageDef>
-			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-			<meleeArmorPenetration>0.08</meleeArmorPenetration>
-        </li>
-		</verbs>
-	</value>
-	</li>
-	<!-- === No hoof? No buck? How human!  === -->
-	<!-- ===================================== -->
+	<!-- === Patch Serg default melee attacks === -->
+	<!-- === Sidewards eyeballs thrash depth perception === -->
+	<!-- === Sweet swipeys tho 	=== -->
+
+			<li Class="PatchOperationAdd">
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName = "Alien_SergalNME"]/statBases</xpath>
+			<value>
+			<AimingAccuracy>0.9</AimingAccuracy>
+			<MeleeDodgeChance>2.5</MeleeDodgeChance>
+			<MeleeCritChance>1.25</MeleeCritChance>
+			<MeleeParryChance>1.75</MeleeParryChance>
+			<ReloadSpeed>1.85</ReloadSpeed>
+			<Suppressability>0.25</Suppressability>
+			</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_SergalNME"]/tools</xpath>
+			<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+				<label>left claws</label>
+				<capacities>
+					<li>Slash</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>1.3</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>right claws</label>
+				<capacities>
+					<li>Slash</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>1.3</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>0.95</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<armorPenetration>0.16</armorPenetration>
+				</li>
+			</tools>
+			</value>
+			</li>
+
+	<!-- ================================================= -->
 	<!-- === BaseBodySize, ArmorRatings, MoveSpeed, and BaseHealth should already be set. I think. === -->
 	<!-- ===================================== -->
 	<!-- === Adds In Inspector Tabs 	   === -->

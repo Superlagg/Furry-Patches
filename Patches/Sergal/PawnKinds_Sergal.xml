@@ -5,11 +5,11 @@
 		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
-				<modName>Logann Race</modName>
+				<modName>Sergals and Gnolls</modName>
 			</li>
 			<!-- ========== Scoot ========== -->
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxColonist"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalColonist"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -40,7 +40,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="FerrexExecutive"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalPackLeader"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -71,7 +71,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxTrader"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalTrader"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -102,7 +102,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxSlave"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalSlave"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -133,7 +133,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxRefugee"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalRefugee"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -164,7 +164,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxSecurityGuard"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalSecurityGuard"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -195,7 +195,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxMerc"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalRecruit"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -226,7 +226,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxBrawler"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalHunter"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -257,7 +257,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxProfessional"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalCommando"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
@@ -288,7 +288,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PawnKindDef[defName="WolvxNinja"]</xpath>
+				<xpath>/Defs/PawnKindDef[defName="SergalCommandoElite"]</xpath>
 				<value>
 				  <li Class="CombatExtended.LoadoutPropertiesExtension">
 					<primaryMagazineCount>
