@@ -11,28 +11,30 @@ These patches will extend Combat Extended compatibility to a few alien races. Fo
 - Ferrex
 - Logann
 - Orassans
+- Ni'Hal
 - Equium
+- Sergals and Gnolls
 
 All of the races have been tested and function with Combat Extended.
 
-The same can't be said of much of their equipment. While most of the guns and armor work within CE, they're more or less placeholders for when I go in and actually get everything to work the way they should.
+The same can't be said for much of their equipment. While most of the guns and armor work within CE, they are still in need of tweaking.
 
 ------Notes of note:
-- Xenn and Orassan weaponry, while functional, is largely untested outside of seeing if they hold ammo and shoot. Needless to say, they have not been balanced.
-- I have no idea if Xenn and Orassan armors work the way they should. Same with any of the other race's native gear.
-- The Logann's shotgun straight up doesn't work. It holds ammo and looks mean, but it can't be fired and the bayonette cuts like a butter knife.
+- All of the alien weapons are largely untested outside of seeing if they hold ammo and shoot. Needless to say, they have not been balanced.
 - The Xenn Frost Cannon sets things on fire.
-- The Ferret Guns are wholesale ripped off of the Rimfire CE patch.
-- Equium, Logann, ~~and Orassan~~ pawns don't carry any ammunition.
-- Orassans might spawn with ammo. Might.
-- Some Leeani troops don't carry ammunition due to being small woodland creatures.
+- The Orassan Rocketlauncher is more or less a reskinned RPG.
+- The Orassan Cryolauncher refused to be patched and thus has infinite ammo. Seems to work just fine, otherwise.
+- The Ferret F90 uses more common ammunition.
+- Most of the alien races somehow have access to Orassan and Ni'hal guns.
+- The Orassan and Ni'Hal guns might be kinda OP.
+- I think I made the drakes a little hardcore.
 
 Feedback is appreciated!
 
 ------Installation
 To install, extract the contents into your Combat Extended folder. Agree to any overwrites and you'll be set.
 There are two folders you'll be working with: Patches and Ammo. You'll need to move these folders into your Combat Extended folder. 
-Don't put it in your Rimworld Mods folder and load it through the modlist, it won't work because I haven't figured out how to make it work like that _yet_. 
+Don't put it in your Rimworld Mods folder and load it through the modlist, it won't work because I haven't figured out how to make that work. 
 - You will most likely need a local copy of CE. This is because these patches need to be included with your CE's own patches, as it works off of their architecture or something.
 
 Here are some ways to get a local copy of CE!
